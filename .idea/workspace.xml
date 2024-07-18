@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ebc93e-e07b-428f-8042-17545c68a978" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/moviedb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/xcuserdata/ahmedsamy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/xcshareddata/xcschemes/moviedb.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/xcuserdata/ahmedsamy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/xcuserdata/ahmedsamy.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/AppDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/Base.lproj/Main.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/SceneDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/ViewController.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Configurations/.swiftlint.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Configurations/.tailor.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Configurations/LiveServerConfigurations.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Configurations/ServerConfigurationsManager.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Configurations/StagingServerConfigurations.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Configurations/TestingServerConfigurations.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Extensions/DictionaryExtension.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/apis/ApiClient.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/apis/WebserviceType.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/ListMovieApiResponseDataMapper.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/MovieDataMapper.dart.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/enums/OriginalLanguage.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/models/Dates.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/models/ListMovieApiResponseDataModel.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/models/MovieDataModel.dart.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedbTests/moviedbTests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedbUITests/moviedbUITests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedbUITests/moviedbUITestsLaunchTests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/xcuserdata/ahmedsamy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/xcuserdata/ahmedsamy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +29,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb"
+    "last_opened_file_path": "/Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721331747158</updated>
       <workItem from="1721331750201" duration="597000" />
+      <workItem from="1721332367446" duration="213000" />
     </task>
     <servers />
   </component>
