@@ -13,7 +13,7 @@ class ApiClientTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        apiClient = ApiClient.shared
+        apiClient = ApiClient()
     }
 
     override func tearDown() {

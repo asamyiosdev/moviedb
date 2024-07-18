@@ -17,15 +17,15 @@ class ViewController: UIViewController {
     
     @IBAction func testMethod(_ sender: Any) {
         
-        ApiClient.shared.call(webserviceType: WebserviceType.popular,
-                              success: { response in
-            let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
-            print(reponseItem)
-            
-        },
-                              failed: { _ in
-            
-        })
+//        ApiClient.shared.call(webserviceType: WebserviceType.popular,
+//                              success: { response in
+//            let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
+//            print(reponseItem)
+//            
+//        },
+//                              failed: { _ in
+//            
+//        })
         
     }
     

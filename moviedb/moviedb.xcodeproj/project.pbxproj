@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BE4745532C49ADA100D24AA4 /* ApiClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745522C49ADA100D24AA4 /* ApiClientTest.swift */; };
+		BE4745722C49B3DB00D24AA4 /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745712C49B3DB00D24AA4 /* MovieApi.swift */; };
+		BE4745732C49B3DB00D24AA4 /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745712C49B3DB00D24AA4 /* MovieApi.swift */; };
+		BE4745762C49B4A000D24AA4 /* MovieApiContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745752C49B4A000D24AA4 /* MovieApiContract.swift */; };
+		BE4745772C49B4A000D24AA4 /* MovieApiContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745752C49B4A000D24AA4 /* MovieApiContract.swift */; };
+		BE47457A2C49B8FC00D24AA4 /* MovieApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745792C49B8FC00D24AA4 /* MovieApiTests.swift */; };
+		BE47457D2C49BA9500D24AA4 /* ApiClientContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47457C2C49BA9500D24AA4 /* ApiClientContract.swift */; };
+		BE47457E2C49BA9500D24AA4 /* ApiClientContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47457C2C49BA9500D24AA4 /* ApiClientContract.swift */; };
 		BE9FA8A92C47DA3100CF780C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8A82C47DA3100CF780C /* AppDelegate.swift */; };
 		BE9FA8AB2C47DA3100CF780C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8AA2C47DA3100CF780C /* SceneDelegate.swift */; };
 		BE9FA8B02C47DA3200CF780C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9FA8AE2C47DA3200CF780C /* Main.storyboard */; };
@@ -18,7 +25,6 @@
 		BE9FA8CC2C47DA3500CF780C /* moviedbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8CB2C47DA3500CF780C /* moviedbUITestsLaunchTests.swift */; };
 		BE9FA8EA2C48522500CF780C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8E92C48522500CF780C /* ApiClient.swift */; };
 		BE9FA8EB2C48522500CF780C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8E92C48522500CF780C /* ApiClient.swift */; };
-		BE9FA8EC2C48522500CF780C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8E92C48522500CF780C /* ApiClient.swift */; };
 		BE9FA8EE2C48557F00CF780C /* WebserviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8ED2C48557F00CF780C /* WebserviceType.swift */; };
 		BE9FA8EF2C48557F00CF780C /* WebserviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8ED2C48557F00CF780C /* WebserviceType.swift */; };
 		BE9FA8F02C48557F00CF780C /* WebserviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8ED2C48557F00CF780C /* WebserviceType.swift */; };
@@ -74,6 +80,10 @@
 
 /* Begin PBXFileReference section */
 		BE4745522C49ADA100D24AA4 /* ApiClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTest.swift; sourceTree = "<group>"; };
+		BE4745712C49B3DB00D24AA4 /* MovieApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApi.swift; sourceTree = "<group>"; };
+		BE4745752C49B4A000D24AA4 /* MovieApiContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiContract.swift; sourceTree = "<group>"; };
+		BE4745792C49B8FC00D24AA4 /* MovieApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiTests.swift; sourceTree = "<group>"; };
+		BE47457C2C49BA9500D24AA4 /* ApiClientContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientContract.swift; sourceTree = "<group>"; };
 		BE9FA8A52C47DA3100CF780C /* moviedb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moviedb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9FA8A82C47DA3100CF780C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9FA8AA2C47DA3100CF780C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 		BE47454F2C49AC1B00D24AA4 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				BE4745782C49B8DD00D24AA4 /* apis */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -155,6 +166,47 @@
 				BE4745522C49ADA100D24AA4 /* ApiClientTest.swift */,
 			);
 			path = apis;
+			sourceTree = "<group>";
+		};
+		BE47456F2C49B3BE00D24AA4 /* dataSources */ = {
+			isa = PBXGroup;
+			children = (
+				BE4745702C49B3BE00D24AA4 /* apis */,
+			);
+			path = dataSources;
+			sourceTree = "<group>";
+		};
+		BE4745702C49B3BE00D24AA4 /* apis */ = {
+			isa = PBXGroup;
+			children = (
+				BE4745712C49B3DB00D24AA4 /* MovieApi.swift */,
+			);
+			path = apis;
+			sourceTree = "<group>";
+		};
+		BE4745742C49B47800D24AA4 /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+				BE4745752C49B4A000D24AA4 /* MovieApiContract.swift */,
+			);
+			path = contracts;
+			sourceTree = "<group>";
+		};
+		BE4745782C49B8DD00D24AA4 /* apis */ = {
+			isa = PBXGroup;
+			children = (
+				BE4745792C49B8FC00D24AA4 /* MovieApiTests.swift */,
+			);
+			name = apis;
+			path = dataSources/apis;
+			sourceTree = "<group>";
+		};
+		BE47457B2C49BA8000D24AA4 /* contract */ = {
+			isa = PBXGroup;
+			children = (
+				BE47457C2C49BA9500D24AA4 /* ApiClientContract.swift */,
+			);
+			path = contract;
 			sourceTree = "<group>";
 		};
 		BE9FA89C2C47DA3100CF780C = {
@@ -233,6 +285,7 @@
 		BE9FA8E42C484FCD00CF780C /* apis */ = {
 			isa = PBXGroup;
 			children = (
+				BE47457B2C49BA8000D24AA4 /* contract */,
 				BE9FA8ED2C48557F00CF780C /* WebserviceType.swift */,
 				BE9FA8E92C48522500CF780C /* ApiClient.swift */,
 			);
@@ -270,6 +323,8 @@
 		BE9FA9102C48828100CF780C /* data */ = {
 			isa = PBXGroup;
 			children = (
+				BE4745742C49B47800D24AA4 /* contracts */,
+				BE47456F2C49B3BE00D24AA4 /* dataSources */,
 				BE9FA91C2C48893400CF780C /* mappers */,
 				BE9FA9112C48828100CF780C /* models */,
 			);
@@ -467,15 +522,18 @@
 				BE9FA8EE2C48557F00CF780C /* WebserviceType.swift in Sources */,
 				BE9FA9302C48923200CF780C /* MovieDataMapper.dart.swift in Sources */,
 				BE9FA9282C4891D400CF780C /* Dates.swift in Sources */,
+				BE4745762C49B4A000D24AA4 /* MovieApiContract.swift in Sources */,
 				BE9FA9072C48569D00CF780C /* ServerConfigurationsManager.swift in Sources */,
 				BE9FA8A92C47DA3100CF780C /* AppDelegate.swift in Sources */,
 				BE9FA8AB2C47DA3100CF780C /* SceneDelegate.swift in Sources */,
 				BE9FA9152C4882A200CF780C /* MovieDataModel.dart.swift in Sources */,
+				BE47457D2C49BA9500D24AA4 /* ApiClientContract.swift in Sources */,
 				BE9FA9332C4990E800CF780C /* ViewController.swift in Sources */,
 				BE9FA9242C488F1C00CF780C /* DictionaryExtension.swift in Sources */,
 				BE9FA9192C4884BF00CF780C /* ListMovieApiResponseDataModel.swift in Sources */,
 				BE9FA92C2C4891F700CF780C /* OriginalLanguage.swift in Sources */,
 				BE9FA8EA2C48522500CF780C /* ApiClient.swift in Sources */,
+				BE4745722C49B3DB00D24AA4 /* MovieApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,16 +543,20 @@
 			files = (
 				BE9FA9202C488CB100CF780C /* ListMovieApiResponseDataMapper.swift in Sources */,
 				BE9FA8C02C47DA3500CF780C /* moviedbTests.swift in Sources */,
+				BE47457A2C49B8FC00D24AA4 /* MovieApiTests.swift in Sources */,
 				BE9FA8EB2C48522500CF780C /* ApiClient.swift in Sources */,
 				BE4745532C49ADA100D24AA4 /* ApiClientTest.swift in Sources */,
 				BE9FA91A2C4884BF00CF780C /* ListMovieApiResponseDataModel.swift in Sources */,
 				BE9FA8EF2C48557F00CF780C /* WebserviceType.swift in Sources */,
 				BE9FA9082C48569D00CF780C /* ServerConfigurationsManager.swift in Sources */,
 				BE9FA92D2C4891F700CF780C /* OriginalLanguage.swift in Sources */,
+				BE47457E2C49BA9500D24AA4 /* ApiClientContract.swift in Sources */,
 				BE9FA9292C4891D400CF780C /* Dates.swift in Sources */,
 				BE9FA9312C48923200CF780C /* MovieDataMapper.dart.swift in Sources */,
 				BE9FA9162C4882A200CF780C /* MovieDataModel.dart.swift in Sources */,
+				BE4745732C49B3DB00D24AA4 /* MovieApi.swift in Sources */,
 				BE9FA9252C488F1C00CF780C /* DictionaryExtension.swift in Sources */,
+				BE4745772C49B4A000D24AA4 /* MovieApiContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +575,6 @@
 				BE9FA92E2C4891F700CF780C /* OriginalLanguage.swift in Sources */,
 				BE9FA9322C48923200CF780C /* MovieDataMapper.dart.swift in Sources */,
 				BE9FA8CC2C47DA3500CF780C /* moviedbUITestsLaunchTests.swift in Sources */,
-				BE9FA8EC2C48522500CF780C /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

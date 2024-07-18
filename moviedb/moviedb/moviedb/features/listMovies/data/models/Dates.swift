@@ -7,6 +7,6 @@
 
 import Foundation
 // MARK: - Dates
-struct Dates {
+struct Dates :Equatable {
     let maximum, minimum: String
 }

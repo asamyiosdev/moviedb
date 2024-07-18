@@ -23,11 +23,13 @@ enum HTTPMethod: String {
     case post = "POST"
 }
 
-class ApiClient {
-    static let shared = ApiClient()
+class ApiClient : ApiClientContract {
+ 
+//    static let shared = ApiClient()
 
-    private init() {}
+     init() {}
     
+
     func call(parameters: [String: Any]? = nil,
               webserviceType: String,
               success: @escaping (([String: Any]) -> Void),

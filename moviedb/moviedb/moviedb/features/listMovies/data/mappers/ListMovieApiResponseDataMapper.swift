@@ -17,7 +17,7 @@ class ListMovieApiResponseDataMapper {
         
         return ListMovieApiResponseDataModel(dates: dates ,
                                              page: response.getInt("page"),
-                                             results: list, totalPages: response.getInt("totalPages"), totalResults: response.getInt("totalResults"))
+                                             results: list, totalPages: response.getInt("total_pages"), totalResults: response.getInt("total_results"))
         
     }
 }
