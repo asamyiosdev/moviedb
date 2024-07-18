@@ -63,7 +63,7 @@ class MovieApiTests: XCTestCase {
         
         // Act
         var receivedResponse: ListMovieApiResponseDataModel?
-        movieApi.getNowPlaying(webserviceType: WebserviceType.nowPlaying) { response in
+        movieApi.getNowPlaying() { response in
             receivedResponse = response
         } failed: { error in
             XCTFail("getNowPlaying call failed: \(error)")
@@ -81,7 +81,7 @@ class MovieApiTests: XCTestCase {
         
         // Act
         var receivedResponse: ListMovieApiResponseDataModel?
-        movieApi.getPopular(webserviceType: WebserviceType.popular) { response in
+        movieApi.getPopular() { response in
             receivedResponse = response
         } failed: { error in
             XCTFail("getPopular call failed: \(error)")
@@ -99,7 +99,7 @@ class MovieApiTests: XCTestCase {
         
         // Act
         var receivedResponse: ListMovieApiResponseDataModel?
-        movieApi.getUpcoming(webserviceType: WebserviceType.upcoming) { response in
+        movieApi.getUpcoming() { response in
             receivedResponse = response
         } failed: { error in
             XCTFail("getUpcoming call failed: \(error)")
@@ -154,19 +154,19 @@ class MockApiClient: ApiClientContract {
      func call(parameters: [String: Any]?, webserviceType: String, success: @escaping ([String: Any]) -> Void, failed: @escaping ([String: Any]) -> Void) {
         switch webserviceType {
         case WebserviceType.nowPlaying:
-            if let response = stubbedNowPlayingResponse {
+            if stubbedNowPlayingResponse != nil {
                 success(responseJson)
             } else {
                 failed(["error": "Failed to get now playing movies"])
             }
         case WebserviceType.popular:
-            if let response = stubbedPopularResponse {
+            if stubbedPopularResponse != nil {
                 success(responseJson)
             } else {
                 failed(["error": "Failed to get popular movies"])
             }
         case WebserviceType.upcoming:
-            if let response = stubbedUpcomingResponse {
+            if stubbedUpcomingResponse != nil {
                 success(responseJson)
             } else {
                 failed(["error": "Failed to get upcoming movies"])

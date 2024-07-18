@@ -20,5 +20,17 @@ class ListMovieApiResponseDataMapper {
                                              results: list, totalPages: response.getInt("total_pages"), totalResults: response.getInt("total_results"))
         
     }
+    
+    
+    static func toEntity(dataMode: ListMovieApiResponseDataModel) -> ListMovieApiResponse {
+        
+        ListMovieApiResponse(dates: dataMode.dates,
+                             page: dataMode.page,
+                             results:MovieDataMapper.toListEntities(list: dataMode.results),
+                             totalPages: dataMode.totalPages,
+                             totalResults: dataMode.totalResults)
+    }
+    
+    
 }
 

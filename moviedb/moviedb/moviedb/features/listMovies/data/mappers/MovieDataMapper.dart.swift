@@ -30,10 +30,33 @@ class MovieDataMapper {
     
     static func fromListApiMap(list: [Any]) -> [MovieDataModel] {
         return list.compactMap { item in
-                  guard let itemDict = item as? [String: Any] else { return nil }
-                  return fromApiMap(response: itemDict)
-              }
+            guard let itemDict = item as? [String: Any] else { return nil }
+            return fromApiMap(response: itemDict)
+        }
     }
     
     
+    static func toEntity(dataMode: MovieDataModel) -> Movie {
+        Movie(adult: dataMode.adult,
+              backdropPath: dataMode.backdropPath,
+              genreIDS: dataMode.genreIDS,
+              id: dataMode.id,
+              originalLanguage: dataMode.originalLanguage,
+              originalTitle: dataMode.originalTitle,
+              overview: dataMode.overview,
+              popularity: dataMode.popularity,
+              posterPath: dataMode.posterPath,
+              releaseDate: dataMode.releaseDate,
+              title: dataMode.title,
+              video: dataMode.video,
+              voteAverage: dataMode.voteAverage,
+              voteCount: dataMode.voteCount)
+    }
+    
+    static func toListEntities(list: [MovieDataModel]) -> [Movie] {
+        return list.compactMap { item in
+            return toEntity(dataMode: item)
+        }
+    }
+
 }

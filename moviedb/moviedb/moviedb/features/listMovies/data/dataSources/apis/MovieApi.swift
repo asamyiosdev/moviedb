@@ -15,29 +15,29 @@ class MovieApi: MovieApiContract {
         self.apiClient = apiClient
     }
     
-    func getNowPlaying(webserviceType: String, success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    func getNowPlaying(success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         self.apiClient.call(parameters: nil, webserviceType: WebserviceType.nowPlaying,
-                              success: { response in
+                            success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
             success(reponseItem)
             
         },
-                              failed: { error in
+                            failed: { error in
             failed(error)
             
         })
         
     }
     
-    func getPopular(webserviceType: String, success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    func getPopular( success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
         self.apiClient.call(parameters: nil,webserviceType: WebserviceType.popular,
-                              success: { response in
+                            success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
             success(reponseItem)
             
         },
-                              failed: { error in
+                            failed: { error in
             failed(error)
             
         })
@@ -45,15 +45,15 @@ class MovieApi: MovieApiContract {
         
     }
     
-    func getUpcoming(webserviceType: String, success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    func getUpcoming( success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
         self.apiClient.call(parameters: nil,webserviceType: WebserviceType.upcoming,
-                              success: { response in
+                            success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
             success(reponseItem)
             
         },
-                              failed: { error in
+                            failed: { error in
             failed(error)
             
         })
