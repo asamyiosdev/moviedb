@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WebservicesUrl</key>
+	<string>https://stagingk8s-api.passto.app/</string>
+	<key>RabbitMqUrl</key>
+	<string>http://stagingk8s-mq.passto.app</string>
+	<key>FilesUrl</key>
+	<string>staging-files.passto.app/</string>
+	<key>KYCBaseURL</key>
+	<string>https://kyc.passto.app/</string>
+	<key>KYCUsername</key>
+	<string>CaptureStudio</string>
+	<key>KYCPassword</key>
+	<string>lPsMjhi7ikC3ioP</string>
+	<key>JudoToken</key>
+	<string>heR6YSMoORFOLVBh</string>
+	<key>JudoSecret</key>
+	<string>fa3264434f5744bd1cb8fb9f9c4438ce67aa9c9b8966451682d29f58fd257f6b</string>
+	<key>JudoId</key>
+	<string>100192-731</string>
+	<key>JudoSandboxed</key>
+	<false/>
+	<key>MoengageApiKey</key>
+	<string>FEL7TQ9IIBQVKVKQ24QQ5QL7</string>
+	<key>appsFlyerDevKey</key>
+	<string>ZnQkMu2icaJrQF6MbrnsFb</string>
+	<key>appleAppID</key>
+	<string>1354449369</string>
+	<key>appsFlyerIsDebug</key>
+	<false/>
+</dict>
+</plist>

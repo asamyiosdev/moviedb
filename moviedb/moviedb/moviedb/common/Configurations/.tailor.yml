@@ -1,0 +1,11 @@
+include:
+  - PassTo
+
+exclude:
+  - Pods
+
+except:
+  - trailing-whitespace
+  - function-whitespace
+  - brace-style
+  - trailing-closure
