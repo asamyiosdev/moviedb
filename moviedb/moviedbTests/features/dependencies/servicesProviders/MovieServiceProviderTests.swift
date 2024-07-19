@@ -8,11 +8,11 @@
 import XCTest
 
 class MovieServiceProviderTests: XCTestCase {
-    func testGetReturnsMovieApiInstance() {
+    func testGetReturnsMovieServiceInstance() {
         // Call the method
-        let movieApi = MovieApiProvider.get()
-        // Assert that the returned object is of type MovieApi
-        XCTAssertNotNil(movieApi, "The MovieApi instance should not be nil.")
+        let MovieService = MovieServiceProvider.get()
+        // Assert that the returned object is of type MovieService
+        XCTAssertNotNil(MovieService, "The MovieService instance should not be nil.")
     }
 }
 
