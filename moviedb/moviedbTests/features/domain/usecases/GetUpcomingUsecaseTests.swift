@@ -63,7 +63,7 @@ final class GetUpcomingUsecaseTests: XCTestCase {
         let expectation = self.expectation(description: "Success callback should be called")
         
         // Act
-        getUpcomingUsecase.get(success: { response in
+        getUpcomingUsecase.get(page:1,success: { response in
             XCTAssertEqual(response, expectedResponse, "The response should match the expected response.")
             expectation.fulfill()
         }, failed: { _ in
@@ -81,7 +81,7 @@ final class GetUpcomingUsecaseTests: XCTestCase {
         let expectation = self.expectation(description: "Failure callback should be called")
         
         // Act
-        getUpcomingUsecase.get(success: { _ in
+        getUpcomingUsecase.get(page:1,success: { _ in
             XCTFail("Success callback should not be called")
         }, failed: { error in
             XCTAssertEqual(error as NSDictionary, expectedError as NSDictionary, "The error should match the expected error.")

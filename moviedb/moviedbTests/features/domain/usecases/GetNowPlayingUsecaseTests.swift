@@ -63,7 +63,7 @@ class GetNowPlayingUsecaseTests: XCTestCase {
         let expectation = self.expectation(description: "Success callback should be called")
         
         // Act
-        getNowPlayingUsecase.get(success: { response in
+        getNowPlayingUsecase.get(page:1,success: { response in
             XCTAssertEqual(response, expectedResponse, "The response should match the expected response.")
             expectation.fulfill()
         }, failed: { _ in
@@ -81,7 +81,7 @@ class GetNowPlayingUsecaseTests: XCTestCase {
         let expectation = self.expectation(description: "Failure callback should be called")
         
         // Act
-        getNowPlayingUsecase.get(success: { _ in
+        getNowPlayingUsecase.get(page:1,success: { _ in
             XCTFail("Success callback should not be called")
         }, failed: { error in
             XCTAssertEqual(error as NSDictionary, expectedError as NSDictionary, "The error should match the expected error.")
@@ -105,7 +105,7 @@ class MockMovieService: MovieServiceContract {
     var popularError: [String: Any]?
     var upcomingError: [String: Any]?
     
-    func getNowPlaying(success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
+    func getNowPlaying(page:Int, success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
         if let response = nowPlayingResponse {
             success(response)
         } else if let error = nowPlayingError {
@@ -113,7 +113,7 @@ class MockMovieService: MovieServiceContract {
         }
     }
     
-    func getPopular(success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
+    func getPopular(page:Int,success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
         if let response = popularResponse {
             success(response)
         } else if let error = popularError {
@@ -121,7 +121,7 @@ class MockMovieService: MovieServiceContract {
         }
     }
     
-    func getUpcoming(success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
+    func getUpcoming(page:Int,success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
         if let response = upcomingResponse {
             success(response)
         } else if let error = upcomingError {

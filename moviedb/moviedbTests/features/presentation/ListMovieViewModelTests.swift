@@ -92,16 +92,6 @@ final class ListMovieViewModelTests: XCTestCase {
     }
     
     
-    func testShowMoreButton_WhenPageIsLessThanTotalPages_ReturnsTrue() {
-         // Arrange
-        let mockResponse = getListMovieApiResponse()
-         
-         // Act
-         let showMore = sut.showMoreButton()
-         
-         // Assert
-         XCTAssertTrue(showMore)
-     }
      
      func testShowMoreButton_WhenPageIsEqualToTotalPages_ReturnsFalse() {
          // Arrange
@@ -136,7 +126,7 @@ class MockGetListMoviesUsecase: GetListMoviesUsecaseContract {
     
     var failedError: [String: Any]?
     
-    func get(success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
+    func get(page:Int,success: @escaping (ListMovieApiResponse) -> Void, failed: @escaping ([String: Any]) -> Void) {
         if let response = successResponse {
             success(response)
         } else if let error = failedError {

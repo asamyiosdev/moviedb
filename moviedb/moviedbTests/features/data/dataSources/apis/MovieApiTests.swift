@@ -63,11 +63,10 @@ class MovieApiTests: XCTestCase {
         
         // Act
         var receivedResponse: ListMovieApiResponseDataModel?
-        movieApi.getNowPlaying() { response in
+        movieApi.getNowPlaying(page: 1, success: ({ response in
             receivedResponse = response
-        } failed: { error in
-            XCTFail("getNowPlaying call failed: \(error)")
-        }
+        }), failed: ({ error in   XCTFail("getNowPlaying call failed: \(error)") }))
+        
         
         // Assert
         XCTAssertNotNil(receivedResponse)
@@ -81,11 +80,11 @@ class MovieApiTests: XCTestCase {
         
         // Act
         var receivedResponse: ListMovieApiResponseDataModel?
-        movieApi.getPopular() { response in
+    
+        movieApi.getPopular(page: 1, success: ({ response in
             receivedResponse = response
-        } failed: { error in
-            XCTFail("getPopular call failed: \(error)")
-        }
+        }), failed: ({ error in   XCTFail("getNowPlaying call failed: \(error)") }))
+        
         
         // Assert
         XCTAssertNotNil(receivedResponse)
@@ -99,11 +98,10 @@ class MovieApiTests: XCTestCase {
         
         // Act
         var receivedResponse: ListMovieApiResponseDataModel?
-        movieApi.getUpcoming() { response in
+
+        movieApi.getUpcoming(page: 1, success: ({ response in
             receivedResponse = response
-        } failed: { error in
-            XCTFail("getUpcoming call failed: \(error)")
-        }
+        }), failed: ({ error in   XCTFail("getNowPlaying call failed: \(error)") }))
         
         // Assert
         XCTAssertNotNil(receivedResponse)
