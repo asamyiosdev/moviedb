@@ -23,16 +23,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5AD6521C-72AB-4298-BAEB-CE9B6CF75796"
+            uuid = "F1A9B233-8D5F-4766-A673-82E804022F21"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "moviedb/moviedb/common/apis/ApiClient.swift"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/BasicViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "call(method:parameters:webserviceType:success:failed:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "navigateToMovieDetails(item:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E188C8B-EAB1-4037-9B43-AD781BE4954E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/BasicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "navigateToMovieDetails(item:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

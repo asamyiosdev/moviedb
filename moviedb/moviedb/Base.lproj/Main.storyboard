@@ -35,13 +35,44 @@
                     <view key="view" contentMode="scaleToFill" id="Nco-hT-7pC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRd-p0-wAS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-lj-rqZ" customClass="CustomNavigationBar" customModule="moviedb" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="jCT-k5-rCi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hidenBackButton" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="TitleText" value="Details"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QYu-lj-rqZ" secondAttribute="trailing" id="5Co-j5-wac"/>
+                                    <constraint firstItem="QYu-lj-rqZ" firstAttribute="top" secondItem="PRd-p0-wAS" secondAttribute="top" id="CGt-EL-c1L"/>
+                                    <constraint firstItem="QYu-lj-rqZ" firstAttribute="leading" secondItem="PRd-p0-wAS" secondAttribute="leading" id="zet-Ij-6G6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zSD-OM-ndd"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="PRd-p0-wAS" firstAttribute="bottom" secondItem="zSD-OM-ndd" secondAttribute="bottom" id="0PQ-7N-tdk"/>
+                            <constraint firstItem="PRd-p0-wAS" firstAttribute="leading" secondItem="zSD-OM-ndd" secondAttribute="leading" id="HiW-wj-lT9"/>
+                            <constraint firstItem="PRd-p0-wAS" firstAttribute="top" secondItem="zSD-OM-ndd" secondAttribute="top" id="Nty-45-Zdz"/>
+                            <constraint firstItem="PRd-p0-wAS" firstAttribute="width" secondItem="Nco-hT-7pC" secondAttribute="width" id="mls-Qa-Fvl"/>
+                            <constraint firstItem="PRd-p0-wAS" firstAttribute="trailing" secondItem="zSD-OM-ndd" secondAttribute="trailing" id="q0P-88-OhM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF7-gl-HvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1665" y="909"/>
+            <point key="canvasLocation" x="-1666.4122137404579" y="908.45070422535218"/>
         </scene>
         <!--Now playing-->
         <scene sceneID="1v5-Ii-iwf">
@@ -141,6 +172,12 @@
         <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="movieclapper" catalog="system" width="128" height="113"/>
         <image name="popcorn" catalog="system" width="103" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

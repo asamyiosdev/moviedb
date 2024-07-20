@@ -30,7 +30,5 @@ class ListMovieApiResponseDataMapper {
                              totalPages: dataMode.totalPages,
                              totalResults: dataMode.totalResults)
     }
-    
-    
 }
 
