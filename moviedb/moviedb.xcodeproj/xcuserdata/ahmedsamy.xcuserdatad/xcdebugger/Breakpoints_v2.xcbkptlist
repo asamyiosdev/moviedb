@@ -7,81 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9F5D42D2-739E-458C-B498-DAA73D0E1F85"
+            uuid = "A7F423BB-FC32-43F7-88E5-50EE32E16D40"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/NowPlayingListView/NowPlayingListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "loadMoreDataIfNeeded()"
-            landmarkType = "7">
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "NowPlayingListViewModel"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84C39A72-B852-49BD-A0F4-3B0889B7AAB1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "loadMoreDataIfNeeded()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AE9E636E-BA58-419C-BADE-5C5A6082C3A9"
+            uuid = "5AD6521C-72AB-4298-BAEB-CE9B6CF75796"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moviedb/moviedb/common/apis/ApiClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "request(urlString:method:parameters:completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "call(method:parameters:webserviceType:success:failed:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AE9E636E-BA58-419C-BADE-5C5A6082C3A9 - bb1eb5d93adbe172"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in moviedb.ApiClient.request(urlString: Swift.String, method: moviedb.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completion: (Swift.Result&lt;Foundation.Data, moviedb.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "moviedb"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/common/apis/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "AE9E636E-BA58-419C-BADE-5C5A6082C3A9 - bb1eb5d93adbe172"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in moviedb.ApiClient.request(urlString: Swift.String, method: moviedb.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completion: (Swift.Result&lt;Foundation.Data, moviedb.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "moviedb"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/common/apis/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "324">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

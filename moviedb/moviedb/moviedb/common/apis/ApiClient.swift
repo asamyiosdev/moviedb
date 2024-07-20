@@ -166,7 +166,13 @@ class ApiClient : ApiClientContract {
     }
     
     func getDefaultParameters() -> [String: Any]{
-        let queryItems = ["api_key": ServerConfigurationsManager.sharedInstance.apiKey ]
+        let queryItems = ["api_key": ServerConfigurationsManager.sharedInstance.apiKey,
+          "with_original_language":"ar"
+        ]
+        
+     
+
+        
         return queryItems
     }
 }

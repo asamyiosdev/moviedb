@@ -1,5 +1,5 @@
 //
-//  NowPlayingListViewModel.swift
+//  PopularListMovieViewModel.swift
 //  moviedb
 //
 //  Created by Ahmed samy on 20/07/2024.
@@ -7,18 +7,19 @@
 
 import Foundation
 
-class NowPlayingListViewModel : ListMovieViewModel {
+
+class PopularListMovieViewModel : ListMovieViewModel {
     // MARK: - Public Methods
     //
     init(
-        getNowPlayingUsecase: GetNowPlayingUsecase) {
-            super.init(getListMovieUsecase: getNowPlayingUsecase)
+        getPopularUsecase: GetPopularUsecase) {
+            super.init(getListMovieUsecase: getPopularUsecase)
         }
 }
 
 
 
-extension NowPlayingListViewModel : GetListMoviesViewModelContract {
+extension PopularListMovieViewModel : GetListMoviesViewModelContract {
     
     func getListMovies(fromLoadMore:Bool,
                        success: @escaping (() -> Void), failed: @escaping (([String : Any]) -> Void)) {

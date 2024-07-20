@@ -95,7 +95,7 @@ final class ListMovieViewModelTests: XCTestCase {
      
      func testShowMoreButton_WhenPageIsEqualToTotalPages_ReturnsFalse() {
          // Arrange
-         let mockResponse = getListMovieApiResponse()
+         _ = getListMovieApiResponse()
          
          // Act
          let showMore = sut.showMoreButton()

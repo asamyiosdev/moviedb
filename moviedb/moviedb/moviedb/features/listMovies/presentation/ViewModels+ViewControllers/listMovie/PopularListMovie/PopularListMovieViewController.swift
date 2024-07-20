@@ -1,5 +1,5 @@
 //
-//  NowPlayingListViewController.swift
+//  PopularListMovieViewController.swift
 //  moviedb
 //
 //  Created by Ahmed samy on 20/07/2024.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class NowPlayingListViewController: BasicViewController {
+class PopularListMovieViewController: BasicViewController {
     @IBOutlet weak var movieListView: MovieItem!
     
-    let viewModel: NowPlayingListViewModel = NowPlayingListViewModelProvider.get()
+    let viewModel: PopularListMovieViewModel = PopularListMovieViewModelProvider.get()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieListView.configView(title: "Popular")
+        movieListView.configView(title: "Now Playing")
         movieListView.delegate = self
         self.callDataSource()
     }
@@ -36,7 +36,7 @@ class NowPlayingListViewController: BasicViewController {
     
 }
 
-extension NowPlayingListViewController : MovieListViewDelegate{
+extension PopularListMovieViewController : MovieListViewDelegate{
     func item(indexPath: IndexPath) -> Movie? {
         let item =   self.viewModel.getItemsForIndex(index: indexPath.row)
         return item;

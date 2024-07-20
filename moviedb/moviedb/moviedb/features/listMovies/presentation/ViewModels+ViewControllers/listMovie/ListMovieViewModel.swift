@@ -7,6 +7,13 @@
 
 import Foundation
 
+protocol GetListMoviesViewModelContract {
+    func getListMovies(
+        fromLoadMore:Bool,
+        success: @escaping (() -> Void),
+        failed: @escaping (([String: Any]) -> Void));
+}
+
 class ListMovieViewModel {
     // MARK: - Properties
     
