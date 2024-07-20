@@ -7,8 +7,7 @@
 
 import UIKit
 
-class NowPlayingListViewController: UIViewController {
-    
+class NowPlayingListViewController: BasicViewController {
     @IBOutlet weak var movieListView: MovieItem!
     
     let viewModel: NowPlayingListViewModel = NowPlayingListViewModelProvider.get()
@@ -16,17 +15,23 @@ class NowPlayingListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         movieListView.configView(title: "Now Playing")
-        
         movieListView.delegate = self
         self.callDataSource()
+        
     }
     
-    func callDataSource(){
-        self.viewModel.getListMovies(success: {
-            self.movieListView.reload()
-        },
-                                     failed: { error in
-        })
+    func callDataSource(fromLoadMore:Bool = false){
+        self.showLoading()
+        self.viewModel.getListMovies(
+            fromLoadMore:fromLoadMore,
+            success: {
+                self.movieListView.reload()
+                self.hideLoading()
+            },
+            failed: { error in
+                
+                self.hideLoading()
+            })
     }
     
 }
@@ -41,7 +46,12 @@ extension NowPlayingListViewController : MovieListViewDelegate{
         return self.viewModel.getNumberOfCell( )
     }
     
+    func showMoreButton() -> Bool {
+        return self.viewModel.showMoreButton()
+    }
+    
+    
     func loadMore() {
-        
+        self.callDataSource(fromLoadMore: true)
     }
 }

@@ -14,8 +14,8 @@
             filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "loadMoreDataIfNeeded()"
             landmarkType = "7">
             <Locations>
@@ -77,10 +77,10 @@
             filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "reload()"
-            landmarkType = "7">
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "MovieItem"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "82ECAFF5-B820-4F53-B055-A6C2837CE56E - f6e0cb188364d53b"

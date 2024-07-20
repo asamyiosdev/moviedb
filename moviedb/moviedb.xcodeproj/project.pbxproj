@@ -26,6 +26,10 @@
 		BE413A782C4BD4A800029341 /* NowPlayingListViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A772C4BD4A800029341 /* NowPlayingListViewModelProvider.swift */; };
 		BE413A792C4BD4A800029341 /* NowPlayingListViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A772C4BD4A800029341 /* NowPlayingListViewModelProvider.swift */; };
 		BE413A7A2C4BD4A800029341 /* NowPlayingListViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A772C4BD4A800029341 /* NowPlayingListViewModelProvider.swift */; };
+		BE413A7D2C4BE13100029341 /* ListMovieViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A7C2C4BE13100029341 /* ListMovieViewModelTests.swift */; };
+		BE413A832C4BE8DB00029341 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A822C4BE8DB00029341 /* BasicViewController.swift */; };
+		BE413A842C4BE8DB00029341 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A822C4BE8DB00029341 /* BasicViewController.swift */; };
+		BE413A852C4BE8DB00029341 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE413A822C4BE8DB00029341 /* BasicViewController.swift */; };
 		BE4745532C49ADA100D24AA4 /* ApiClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745522C49ADA100D24AA4 /* ApiClientTest.swift */; };
 		BE4745722C49B3DB00D24AA4 /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745712C49B3DB00D24AA4 /* MovieApi.swift */; };
 		BE4745732C49B3DB00D24AA4 /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4745712C49B3DB00D24AA4 /* MovieApi.swift */; };
@@ -163,6 +167,8 @@
 		BE413A6E2C4BC7BD00029341 /* GetListMoviesUsecaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListMoviesUsecaseContract.swift; sourceTree = "<group>"; };
 		BE413A722C4BCE3A00029341 /* NowPlayingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingListViewModel.swift; sourceTree = "<group>"; };
 		BE413A772C4BD4A800029341 /* NowPlayingListViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingListViewModelProvider.swift; sourceTree = "<group>"; };
+		BE413A7C2C4BE13100029341 /* ListMovieViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewModelTests.swift; sourceTree = "<group>"; };
+		BE413A822C4BE8DB00029341 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		BE4745522C49ADA100D24AA4 /* ApiClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTest.swift; sourceTree = "<group>"; };
 		BE4745712C49B3DB00D24AA4 /* MovieApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApi.swift; sourceTree = "<group>"; };
 		BE4745792C49B8FC00D24AA4 /* MovieApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiTests.swift; sourceTree = "<group>"; };
@@ -304,9 +310,18 @@
 			path = viewModelProvider;
 			sourceTree = "<group>";
 		};
+		BE413A7B2C4BE0F400029341 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BE413A7C2C4BE13100029341 /* ListMovieViewModelTests.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
 		BE47454E2C49AC1B00D24AA4 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				BE413A7B2C4BE0F400029341 /* presentation */,
 				BE4745D32C49E6DF00D24AA4 /* domain */,
 				BE4745A02C49D7C000D24AA4 /* dependencies */,
 				BE47454F2C49AC1B00D24AA4 /* data */,
@@ -571,6 +586,7 @@
 			children = (
 				BE413A672C4B0D1800029341 /* NowPlayingListView */,
 				BE4745FA2C49F78D00D24AA4 /* ListMovieViewModel.swift */,
+				BE413A822C4BE8DB00029341 /* BasicViewController.swift */,
 			);
 			path = listMovie;
 			sourceTree = "<group>";
@@ -681,10 +697,10 @@
 		BE9FA90F2C48828100CF780C /* listMovies */ = {
 			isa = PBXGroup;
 			children = (
-				BE4745F62C49F66100D24AA4 /* presentation */,
 				BE4745992C49D4C300D24AA4 /* dependencies */,
 				BE9FA9102C48828100CF780C /* data */,
 				BE4745852C49CD5B00D24AA4 /* domain */,
+				BE4745F62C49F66100D24AA4 /* presentation */,
 			);
 			path = listMovies;
 			sourceTree = "<group>";
@@ -901,6 +917,7 @@
 				BE4745E22C49EC5300D24AA4 /* GetPopularUsecaseProvider.swift in Sources */,
 				BE413A6C2C4B2A3B00029341 /* MovieItemCell.swift in Sources */,
 				BE47457D2C49BA9500D24AA4 /* ApiClientContract.swift in Sources */,
+				BE413A832C4BE8DB00029341 /* BasicViewController.swift in Sources */,
 				BE4745832C49CCD900D24AA4 /* MovieApiContract.swift in Sources */,
 				BE4745B02C49E15300D24AA4 /* MovieServiceProvider.swift in Sources */,
 				BE9FA9332C4990E800CF780C /* ViewController.swift in Sources */,
@@ -935,6 +952,7 @@
 				BE413A742C4BCE3A00029341 /* NowPlayingListViewModel.swift in Sources */,
 				BE4745CD2C49E4F600D24AA4 /* GetPopularUsecase.swift in Sources */,
 				BE4745532C49ADA100D24AA4 /* ApiClientTest.swift in Sources */,
+				BE413A842C4BE8DB00029341 /* BasicViewController.swift in Sources */,
 				BE47459F2C49D57F00D24AA4 /* movieApiProvider.swift in Sources */,
 				BE4745E32C49EC5300D24AA4 /* GetPopularUsecaseProvider.swift in Sources */,
 				BE413A702C4BC7BD00029341 /* GetListMoviesUsecaseContract.swift in Sources */,
@@ -955,6 +973,7 @@
 				BE4745DA2C49E8B200D24AA4 /* GetPopularUsecaseTests.swift in Sources */,
 				BE413A792C4BD4A800029341 /* NowPlayingListViewModelProvider.swift in Sources */,
 				BE9FA9312C48923200CF780C /* MovieDataMapper.dart.swift in Sources */,
+				BE413A7D2C4BE13100029341 /* ListMovieViewModelTests.swift in Sources */,
 				BE4745DC2C49E91200D24AA4 /* GetUpcomingUsecaseTests.swift in Sources */,
 				BE4745922C49CE9E00D24AA4 /* ListMovieApiResponse.swift in Sources */,
 				BE9FA9162C4882A200CF780C /* MovieDataModel.dart.swift in Sources */,
@@ -993,6 +1012,7 @@
 				BE4745B32C49E1C500D24AA4 /* MovieService.swift in Sources */,
 				BE4745A92C49D93D00D24AA4 /* Movie.swift in Sources */,
 				BE4745B92C49E24100D24AA4 /* ApiClient.swift in Sources */,
+				BE413A852C4BE8DB00029341 /* BasicViewController.swift in Sources */,
 				BE4745E02C49EC3B00D24AA4 /* GetNowPlayingUsecaseProvider.swift in Sources */,
 				BE4745B62C49E20C00D24AA4 /* movieApiProvider.swift in Sources */,
 				BE9FA9092C48569D00CF780C /* ServerConfigurationsManager.swift in Sources */,

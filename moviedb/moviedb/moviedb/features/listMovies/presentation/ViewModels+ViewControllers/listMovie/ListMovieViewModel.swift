@@ -9,8 +9,6 @@ import Foundation
 
 class ListMovieViewModel {
     // MARK: - Properties
-  
-    var dataChanged: (() -> Void)?
     
     var listMovies = [Movie]()
     var ListMovieApiResponse:ListMovieApiResponse? = nil
@@ -19,8 +17,8 @@ class ListMovieViewModel {
     // MARK: - Public Methods
     //
     init(
-        getNowPlayingUsecase: GetNowPlayingUsecase) {
-            self.getListMovieUsecase = getNowPlayingUsecase
+        getListMovieUsecase: GetListMoviesUsecaseContract) {
+            self.getListMovieUsecase = getListMovieUsecase
         }
     
     func onrecieveResponse(response:ListMovieApiResponse){
@@ -36,9 +34,11 @@ class ListMovieViewModel {
     func getNumberOfCell()-> Int{
         return listMovies.count
     }
+    
+    func showMoreButton()-> Bool{
+        let page = ListMovieApiResponse?.page ?? 0
+        let totalPages = ListMovieApiResponse?.totalPages ?? 0
+        return page < totalPages
+    }
+
 }
-
-
-
-
-

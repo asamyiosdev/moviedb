@@ -9,6 +9,7 @@ import Foundation
 
 protocol GetListMoviesViewModelContract {
     func getListMovies(
+        fromLoadMore:Bool,
         success: @escaping (() -> Void),
         failed: @escaping (([String: Any]) -> Void));
 }
@@ -17,9 +18,9 @@ protocol GetListMoviesViewModelContract {
 class NowPlayingListViewModel : ListMovieViewModel {
     // MARK: - Public Methods
     //
-    override init(
+    init(
         getNowPlayingUsecase: GetNowPlayingUsecase) {
-            super.init(getNowPlayingUsecase: getNowPlayingUsecase)
+            super.init(getListMovieUsecase: getNowPlayingUsecase)
         }
 }
 
@@ -27,7 +28,8 @@ class NowPlayingListViewModel : ListMovieViewModel {
 
 extension NowPlayingListViewModel : GetListMoviesViewModelContract {
     
-    func getListMovies(success: @escaping (() -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    func getListMovies(fromLoadMore:Bool,
+                       success: @escaping (() -> Void), failed: @escaping (([String : Any]) -> Void)) {
         self.getListMovieUsecase.get(success: { response in
             self.onrecieveResponse(response: response)
             success()

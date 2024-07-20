@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBar" customModule="moviedb" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="7s0-sP-teo" id="24L-Pz-fLZ"/>
+                <outlet property="lineShadowView" destination="Kx0-V1-aY7" id="Gog-it-LK2"/>
+                <outlet property="titleNavigationLabel" destination="AK8-We-6n4" id="AXg-aQ-Omk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pK-h3-QSp">
+                    <rect key="frame" x="0.0" y="0.0" width="348" height="45"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vY8-BA-Ape">
+                            <rect key="frame" x="0.0" y="0.0" width="348" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-sP-teo">
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="9IG-RL-z21"/>
+                                        <constraint firstAttribute="width" constant="45" id="ZPM-b9-Tdx"/>
+                                    </constraints>
+                                    <state key="normal" image="back_icon"/>
+                                    <connections>
+                                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="bFD-5d-TBf"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AK8-We-6n4">
+                                    <rect key="frame" x="174" y="22.5" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx0-V1-aY7" userLabel="lineView">
+                                    <rect key="frame" x="0.0" y="43" width="348" height="1"/>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="rcL-o8-cob"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="base_background"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="5oA-WH-9C3"/>
+                                <constraint firstAttribute="bottom" secondItem="Kx0-V1-aY7" secondAttribute="bottom" constant="1" id="DqJ-2a-faX"/>
+                                <constraint firstItem="AK8-We-6n4" firstAttribute="centerX" secondItem="vY8-BA-Ape" secondAttribute="centerX" id="M1g-9N-ogA"/>
+                                <constraint firstAttribute="trailing" secondItem="Kx0-V1-aY7" secondAttribute="trailing" id="Ou9-WF-hoz"/>
+                                <constraint firstItem="7s0-sP-teo" firstAttribute="centerY" secondItem="vY8-BA-Ape" secondAttribute="centerY" id="PN3-8o-enn"/>
+                                <constraint firstItem="Kx0-V1-aY7" firstAttribute="leading" secondItem="vY8-BA-Ape" secondAttribute="leading" id="ad9-Pp-GYM"/>
+                                <constraint firstItem="7s0-sP-teo" firstAttribute="leading" secondItem="vY8-BA-Ape" secondAttribute="leading" id="atJ-hN-fRW"/>
+                                <constraint firstItem="AK8-We-6n4" firstAttribute="centerY" secondItem="vY8-BA-Ape" secondAttribute="centerY" id="x9B-k2-TWJ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vY8-BA-Ape" firstAttribute="width" secondItem="4pK-h3-QSp" secondAttribute="width" id="5Bs-pC-cHv"/>
+                        <constraint firstItem="vY8-BA-Ape" firstAttribute="top" secondItem="4pK-h3-QSp" secondAttribute="top" id="ciJ-m2-6Kz"/>
+                        <constraint firstItem="vY8-BA-Ape" firstAttribute="centerX" secondItem="4pK-h3-QSp" secondAttribute="centerX" id="ckk-DX-C0X"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="4pK-h3-QSp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="H7M-Cy-JYj"/>
+                <constraint firstItem="4pK-h3-QSp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="W6x-a0-3bg"/>
+                <constraint firstItem="4pK-h3-QSp" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="eT7-8i-21V"/>
+                <constraint firstItem="4pK-h3-QSp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="y85-Xm-huK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-112" y="-1193.7031484257873"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_icon" width="17" height="14"/>
+        <namedColor name="base_background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
