@@ -7,17 +7,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D614F552-AE6B-41D7-B48F-9A9EED3052E4"
+            uuid = "C36D0BA9-9645-45F0-9B68-7A2EC0854F7E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "loadMoreDataIfNeeded()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C36D0BA9-9645-45F0-9B68-7A2EC0854F7E - cd1196092e45d025"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "moviedb.MovieItem.loadMoreDataIfNeeded() -&gt; ()"
+                  moduleName = "moviedb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1380">
+               </Location>
+               <Location
+                  uuid = "C36D0BA9-9645-45F0-9B68-7A2EC0854F7E - cd1196092e45d025"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "moviedb.MovieItem.loadMoreDataIfNeeded() -&gt; ()"
+                  moduleName = "moviedb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  uuid = "C36D0BA9-9645-45F0-9B68-7A2EC0854F7E - cd1196092e45d388"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "moviedb.MovieItem.loadMoreDataIfNeeded() -&gt; ()"
+                  moduleName = "moviedb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "980">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82ECAFF5-B820-4F53-B055-A6C2837CE56E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "moviedb/ViewController.swift"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "testMethod(_:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "reload()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82ECAFF5-B820-4F53-B055-A6C2837CE56E - f6e0cb188364d53b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "moviedb.MovieItem.reload() -&gt; ()"
+                  moduleName = "moviedb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "82ECAFF5-B820-4F53-B055-A6C2837CE56E - 28b04304aa531dba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in moviedb.MovieItem.reload() -&gt; ()"
+                  moduleName = "moviedb"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ahmedsamy/Documents/Xcode_Workspace/Repository/moviedb/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/MovieItem/MovieItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetNowPlayingUsecase: GetNowPlayingUsecaseContract {
+class GetNowPlayingUsecase: GetListMoviesUsecaseContract {
     
     private let movieService: MovieServiceContract
     

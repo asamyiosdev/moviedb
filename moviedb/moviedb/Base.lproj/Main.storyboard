@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCD-Fm-fsv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -8,36 +8,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="ae7-o6-51e">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="moviedb" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NCD-Fm-fsv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7w1-H3-PxA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qAL-xL-WUO" kind="relationship" relationship="viewControllers" id="zGh-Q6-r8O"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBg-gX-Lxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="3"/>
+        </scene>
+        <!--Now playing-->
+        <scene sceneID="1v5-Ii-iwf">
+            <objects>
+                <viewController storyboardIdentifier="NowPlayingListViewController" id="qAL-xL-WUO" customClass="NowPlayingListViewController" customModule="moviedb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcT-Ad-aRS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mm-RY-sn8">
-                                <rect key="frame" x="67" y="146" width="75" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="testMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcz-Ad-LOY"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLz-Wg-2m4" customClass="MovieItem" customModule="moviedb" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="0Mx-LG-GA8"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dLz-Wg-2m4" firstAttribute="bottom" secondItem="0Mx-LG-GA8" secondAttribute="bottom" id="2Zi-sY-IFB"/>
+                            <constraint firstItem="dLz-Wg-2m4" firstAttribute="width" secondItem="wcT-Ad-aRS" secondAttribute="width" id="7HE-1n-SzI"/>
+                            <constraint firstItem="dLz-Wg-2m4" firstAttribute="centerX" secondItem="0Mx-LG-GA8" secondAttribute="centerX" id="QuJ-pl-p9i"/>
+                            <constraint firstItem="dLz-Wg-2m4" firstAttribute="top" secondItem="0Mx-LG-GA8" secondAttribute="top" id="a6H-Qz-KSj"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Now playing" image="movieclapper" catalog="system" id="EPz-EY-3FJ"/>
+                    <connections>
+                        <outlet property="movieListView" destination="dLz-Wg-2m4" id="dvG-Em-151"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7R-Ap-Hr0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="4"/>
+            <point key="canvasLocation" x="-444" y="815"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="movieclapper" catalog="system" width="128" height="113"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

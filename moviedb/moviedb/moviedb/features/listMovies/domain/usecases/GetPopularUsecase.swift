@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetPopularUsecase: GetPopularUsecaseContract {
+class GetPopularUsecase: GetListMoviesUsecaseContract {
     
     private let movieService: MovieServiceContract
     

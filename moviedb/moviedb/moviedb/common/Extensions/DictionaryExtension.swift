@@ -1,11 +1,3 @@
-// swiftlint:disable:this file_name
-//  DictionaryExtension.swift
-//  PassTo
-//
-//  Created by sygmatel on 1/20/19.
-//  Copyright © 2019 Mohamed Galal. All rights reserved.
-//
-
 import CommonCrypto
 import Foundation
 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MovieItemCell" reuseIdentifier="MovieItemCell" id="BgG-Pn-PFP" customClass="MovieItemCell" customModule="moviedb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="326"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="326"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-oL-hIm">
+                        <rect key="frame" x="0.0" y="12.666666666666657" width="243" height="326"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kew-m4-Skw">
+                                <rect key="frame" x="0.0" y="0.0" width="243" height="235.66666666666666"/>
+                                <color key="backgroundColor" red="0.2588235438" green="0.2941176593" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boneyard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5G-ix-lBM">
+                                <rect key="frame" x="16" y="251.66666666666666" width="227" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05 Jul 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmT-O7-p7e">
+                                <rect key="frame" x="16" y="277.33333333333331" width="227" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.2588235438" green="0.2941176593" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="H5G-ix-lBM" firstAttribute="leading" secondItem="vd7-oL-hIm" secondAttribute="leading" constant="16" id="4eN-CW-q3E"/>
+                            <constraint firstItem="bmT-O7-p7e" firstAttribute="top" secondItem="H5G-ix-lBM" secondAttribute="bottom" constant="4" id="8R6-7i-Kli"/>
+                            <constraint firstAttribute="trailing" secondItem="Kew-m4-Skw" secondAttribute="trailing" id="Pnu-cz-itz"/>
+                            <constraint firstItem="H5G-ix-lBM" firstAttribute="top" secondItem="Kew-m4-Skw" secondAttribute="bottom" constant="16" id="QXV-Nc-vez"/>
+                            <constraint firstAttribute="trailing" secondItem="bmT-O7-p7e" secondAttribute="trailing" id="Qiv-y3-g2q"/>
+                            <constraint firstItem="Kew-m4-Skw" firstAttribute="top" secondItem="vd7-oL-hIm" secondAttribute="top" id="ZUy-Sx-eiR"/>
+                            <constraint firstItem="Kew-m4-Skw" firstAttribute="height" secondItem="vd7-oL-hIm" secondAttribute="height" multiplier="0.72" constant="1" id="dlP-12-ePJ"/>
+                            <constraint firstItem="Kew-m4-Skw" firstAttribute="leading" secondItem="vd7-oL-hIm" secondAttribute="leading" id="j8g-0x-Hq7"/>
+                            <constraint firstItem="bmT-O7-p7e" firstAttribute="leading" secondItem="H5G-ix-lBM" secondAttribute="leading" id="r08-hs-C9p"/>
+                            <constraint firstAttribute="trailing" secondItem="H5G-ix-lBM" secondAttribute="trailing" id="w1T-y6-4kQ"/>
+                            <constraint firstItem="Kew-m4-Skw" firstAttribute="width" secondItem="vd7-oL-hIm" secondAttribute="width" id="x4l-6V-FA6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="opaqueSeparatorColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.5" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.20000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusbottomLeft">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="lXK-S3-Tc4"/>
+            <constraints>
+                <constraint firstItem="vd7-oL-hIm" firstAttribute="height" secondItem="BgG-Pn-PFP" secondAttribute="height" id="DbT-CM-zCU"/>
+                <constraint firstItem="vd7-oL-hIm" firstAttribute="centerY" secondItem="lXK-S3-Tc4" secondAttribute="centerY" id="Kge-J1-fkZ"/>
+                <constraint firstItem="vd7-oL-hIm" firstAttribute="centerX" secondItem="lXK-S3-Tc4" secondAttribute="centerX" id="Rl0-nW-lMH"/>
+                <constraint firstItem="vd7-oL-hIm" firstAttribute="width" secondItem="BgG-Pn-PFP" secondAttribute="width" id="vjp-zN-3wC"/>
+            </constraints>
+            <size key="customSize" width="331" height="239"/>
+            <connections>
+                <outlet property="dateLabel" destination="bmT-O7-p7e" id="8QC-aZ-o23"/>
+                <outlet property="imageMovie" destination="Kew-m4-Skw" id="faj-Wi-kiq"/>
+                <outlet property="nameLabel" destination="H5G-ix-lBM" id="gHc-5M-WdC"/>
+            </connections>
+            <point key="canvasLocation" x="353.43511450381681" y="-5.9859154929577469"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

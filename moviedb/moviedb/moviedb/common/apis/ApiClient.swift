@@ -10,12 +10,9 @@ import Foundation
 enum NetworkError: Error {
     case invalidURL
     case requestFailed(Error)
-    case invalidResponse
-    case invalidData
     case timeOut
-    case decodingError
     case networkError(Error)
-    case noData
+    case unknownError
 }
 
 enum HTTPMethod: String {
@@ -24,12 +21,12 @@ enum HTTPMethod: String {
 }
 
 class ApiClient : ApiClientContract {
- 
-//    static let shared = ApiClient()
-
-     init() {}
     
-
+    //    static let shared = ApiClient()
+    
+    init() {}
+    
+    
     func call(parameters: [String: Any]? = nil,
               webserviceType: String,
               success: @escaping (([String: Any]) -> Void),
@@ -65,7 +62,7 @@ class ApiClient : ApiClientContract {
                  parameters: [String: Any]? = nil,
                  completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         guard let url = URL(string: urlString) else {
-      
+            
             print("Invalid URL")
             return
         }
@@ -94,7 +91,7 @@ class ApiClient : ApiClientContract {
         task.resume()
     }
     
-
+    
     
     func convertParametersToQuery(parameters: [String: Any]?) -> String? {
         guard let parameters = parameters else {
@@ -132,3 +129,11 @@ class ApiClient : ApiClientContract {
     
 }
 
+
+extension ApiClient {
+    
+    func handleError() -> String {
+        return ""
+    }
+    
+}
