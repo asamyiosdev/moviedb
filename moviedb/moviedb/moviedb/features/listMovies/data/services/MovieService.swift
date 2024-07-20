@@ -14,9 +14,9 @@ class MovieService: MovieServiceContract {
         self.movieApi = movieApi
     }
     
-
-    func getNowPlaying(success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
-        self.movieApi.getNowPlaying(success: { response in
+    
+    func getNowPlaying(page:Int,success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+        self.movieApi.getNowPlaying(page: page, success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.toEntity(dataMode: response)
             success(reponseItem)
             
@@ -27,8 +27,8 @@ class MovieService: MovieServiceContract {
         })
     }
     
-    func getPopular(success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
-        self.movieApi.getPopular(success: { response in
+    func getPopular(page:Int,success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+        self.movieApi.getPopular(page: page,success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.toEntity(dataMode: response)
             success(reponseItem)
             
@@ -40,8 +40,8 @@ class MovieService: MovieServiceContract {
         
     }
     
-    func getUpcoming(success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
-        self.movieApi.getUpcoming(success: { response in
+    func getUpcoming(page:Int,success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+        self.movieApi.getUpcoming(page: page,success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.toEntity(dataMode: response)
             success(reponseItem)
             
@@ -51,7 +51,7 @@ class MovieService: MovieServiceContract {
             
         })
     }
-
+    
 }
 
 

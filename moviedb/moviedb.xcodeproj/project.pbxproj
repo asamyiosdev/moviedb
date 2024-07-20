@@ -321,10 +321,10 @@
 		BE47454E2C49AC1B00D24AA4 /* features */ = {
 			isa = PBXGroup;
 			children = (
-				BE413A7B2C4BE0F400029341 /* presentation */,
-				BE4745D32C49E6DF00D24AA4 /* domain */,
-				BE4745A02C49D7C000D24AA4 /* dependencies */,
 				BE47454F2C49AC1B00D24AA4 /* data */,
+				BE4745D32C49E6DF00D24AA4 /* domain */,
+				BE413A7B2C4BE0F400029341 /* presentation */,
+				BE4745A02C49D7C000D24AA4 /* dependencies */,
 			);
 			path = features;
 			sourceTree = "<group>";

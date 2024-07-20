@@ -23,7 +23,8 @@ class ListMovieViewModel {
     
     func onrecieveResponse(response:ListMovieApiResponse){
         self.ListMovieApiResponse = response
-        self.listMovies = response.results
+       let results = response.results
+        self.listMovies.append(contentsOf: results)
     }
     
     func getItemsForIndex(index:Int)-> Movie?{
@@ -40,5 +41,9 @@ class ListMovieViewModel {
         let totalPages = ListMovieApiResponse?.totalPages ?? 0
         return page < totalPages
     }
-
+    
+    func getNextNumberPage()-> Int{
+        let page = ListMovieApiResponse?.page ?? 0
+        return page + 1
+    }
 }

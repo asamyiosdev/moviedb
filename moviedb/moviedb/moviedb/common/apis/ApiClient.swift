@@ -33,11 +33,15 @@ class ApiClient : ApiClientContract {
               failed: @escaping (([String: Any]) -> Void)) {
         let url = ServerConfigurationsManager.sharedInstance.webservicesUrl + webserviceType
         
-        let parameters: [String: Any] = getDefaultParameters()
-        
+        var finalParameters: [String: Any] = getDefaultParameters()
+
+          if let params = parameters {
+              finalParameters.merge(dict: params)
+          }
+    
         request(urlString: url,
                 method: HTTPMethod.get,
-                parameters: parameters,
+                parameters: finalParameters,
                 completion: { data, response, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
@@ -79,7 +83,7 @@ class ApiClient : ApiClientContract {
         else if(method == .get){
             if let query = convertParametersToQuery(parameters: parameters) {
                 var urlComponents = URLComponents(string: urlString)
-                urlComponents?.query = query
+                       urlComponents?.query = query
                 
                 if let url = urlComponents?.url {
                     request = URLRequest(url: url)
@@ -94,31 +98,10 @@ class ApiClient : ApiClientContract {
     
     
     func convertParametersToQuery(parameters: [String: Any]?) -> String? {
-        guard let parameters = parameters else {
-            return nil
-        }
-        
-        var queryItems: [URLQueryItem] = []
-        
-        for (key, value) in parameters {
-            let stringValue: String
-            if let arrayValue = value as? [Any] {
-                // Convert array values to comma-separated string
-                stringValue = arrayValue.map { String(describing: $0) }.joined(separator: ",")
-            } else {
-                stringValue = String(describing: value)
-            }
-            let queryItem = URLQueryItem(name: key, value: stringValue)
-            queryItems.append(queryItem)
-        }
-        
-        if !queryItems.isEmpty {
-            var components = URLComponents()
-            components.queryItems = queryItems
-            return components.query
-        }
-        
-        return nil
+        guard let parameters = parameters else { return nil }
+        var components = URLComponents()
+        components.queryItems = parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        return components.query?.removingPercentEncoding
     }
     
     

@@ -83,12 +83,13 @@ class MovieItem: UIView {
     func reload() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+            self.loadMoreDataIfNeeded()
         }
         
     }
     
     @IBAction func loadMoreButtonClicked(_ sender: Any) {
-        
+        self.delegate?.loadMore()
     }
     
     
@@ -113,7 +114,7 @@ extension MovieItem: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         layout.minimumLineSpacing = minimumLineSpacing
         layout.itemSize = CGSize(width: WidthItem, height: 250)
         collectionView.collectionViewLayout = layout
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 64, right: 16)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 100, right: 16)
         showLoadMore(show: false)
         
         self.collectionView.reloadData()
@@ -126,11 +127,7 @@ extension MovieItem: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(section == 0){
-            return delegate?.numberOfItems() ?? 0
-        }else {
-            return 1
-        }
+        return delegate?.numberOfItems() ?? 0
         
     }
     
@@ -152,15 +149,15 @@ extension MovieItem: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     
     private func loadMoreDataIfNeeded() {
         // Check if we're currently loading more data
-        guard !isLoadingMore else { return }
+//        guard !isLoadingMore else { return }
         
         let showMoreButton =  delegate?.showMoreButton() ?? false
         if(showMoreButton){
             // Check if the user has scrolled to the end
-            let indexPaths = collectionView.indexPathsForVisibleItems
+            let indexPaths = collectionView.indexPathsForVisibleItems.sorted()
             if let lastIndexPath = indexPaths.last  {
                 let numberOfItems = delegate?.numberOfItems() ?? 0
-                if(lastIndexPath.row > numberOfItems - 5){
+                if(lastIndexPath.row == numberOfItems - 1){
                     
                     showLoadMore(show: true)
                 }else {

@@ -30,7 +30,10 @@ extension NowPlayingListViewModel : GetListMoviesViewModelContract {
     
     func getListMovies(fromLoadMore:Bool,
                        success: @escaping (() -> Void), failed: @escaping (([String : Any]) -> Void)) {
-        self.getListMovieUsecase.get(success: { response in
+        let page = self.getNextNumberPage()
+        self.getListMovieUsecase.get(page:page,
+                                     success: { response in
+            
             self.onrecieveResponse(response: response)
             success()
         },

@@ -15,9 +15,10 @@ class GetNowPlayingUsecase: GetListMoviesUsecaseContract {
         self.movieService = movieService
     }
     
-    func get(success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    func get(page:Int,success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
-        self.movieService.getNowPlaying(success: { response in
+        self.movieService.getNowPlaying(page:page,
+                                        success: { response in
             success(response)
             
         },

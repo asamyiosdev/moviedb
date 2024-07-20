@@ -10,14 +10,17 @@ import Foundation
 protocol MovieServiceContract {
     
     func getNowPlaying(
+        page:Int,
         success: @escaping ((ListMovieApiResponse) -> Void),
         failed: @escaping (([String: Any]) -> Void));
     
     func getPopular(
+        page:Int,
         success: @escaping ((ListMovieApiResponse) -> Void),
         failed: @escaping (([String: Any]) -> Void));
     
     func getUpcoming(
+        page:Int,
         success: @escaping ((ListMovieApiResponse) -> Void),
         failed: @escaping (([String: Any]) -> Void));
 }

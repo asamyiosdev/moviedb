@@ -17,7 +17,6 @@ class NowPlayingListViewController: BasicViewController {
         movieListView.configView(title: "Now Playing")
         movieListView.delegate = self
         self.callDataSource()
-        
     }
     
     func callDataSource(fromLoadMore:Bool = false){
@@ -29,7 +28,6 @@ class NowPlayingListViewController: BasicViewController {
                 self.hideLoading()
             },
             failed: { error in
-                
                 self.hideLoading()
             })
     }
@@ -49,7 +47,6 @@ extension NowPlayingListViewController : MovieListViewDelegate{
     func showMoreButton() -> Bool {
         return self.viewModel.showMoreButton()
     }
-    
     
     func loadMore() {
         self.callDataSource(fromLoadMore: true)

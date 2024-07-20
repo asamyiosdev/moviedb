@@ -9,6 +9,7 @@ import Foundation
 
 protocol GetListMoviesUsecaseContract {
     func get(
+        page:Int,
         success: @escaping ((ListMovieApiResponse) -> Void),
         failed: @escaping (([String: Any]) -> Void));
 }

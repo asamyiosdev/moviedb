@@ -15,9 +15,9 @@ class GetUpcomingUsecase: GetListMoviesUsecaseContract {
         self.movieService = movieService
     }
     
-    func get(success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    func get(page:Int,success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
-        self.movieService.getUpcoming(success: { response in
+        self.movieService.getUpcoming(page: page, success: { response in
             success(response)
             
         },

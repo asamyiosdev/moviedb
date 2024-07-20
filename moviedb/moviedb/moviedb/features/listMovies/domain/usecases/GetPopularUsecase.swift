@@ -15,9 +15,10 @@ class GetPopularUsecase: GetListMoviesUsecaseContract {
         self.movieService = movieService
     }
     
-    func get(success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+    
+    func get(page:Int, success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
-        self.movieService.getPopular(success: { response in
+        self.movieService.getPopular(page: page, success: { response in
             success(response)
             
         },
