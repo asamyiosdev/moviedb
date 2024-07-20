@@ -11,6 +11,7 @@ protocol MovieListViewDelegate: AnyObject {
     func item(indexPath: IndexPath) -> Movie?
     func showMoreButton() -> Bool
     func loadMore()
+    func onSelectItem(indexPath: IndexPath)
 }
 
 extension MovieItem {
@@ -144,12 +145,12 @@ extension MovieItem: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        self.delegate?.onSelectItem(indexPath: indexPath)
     }
     
     private func loadMoreDataIfNeeded() {
         // Check if we're currently loading more data
-//        guard !isLoadingMore else { return }
+        //        guard !isLoadingMore else { return }
         
         let showMoreButton =  delegate?.showMoreButton() ?? false
         if(showMoreButton){

@@ -53,4 +53,9 @@ extension UpcomingListMovieViewController : MovieListViewDelegate{
     func loadMore() {
         self.callDataSource(fromLoadMore: true)
     }
+    
+    func onSelectItem(indexPath: IndexPath) {
+        let item =   self.viewModel.getItemsForIndex(index: indexPath.row)
+        self.navigateToMovieDetails(item: item)
+    }
 }
