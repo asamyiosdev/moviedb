@@ -29,6 +29,8 @@ class NowPlayingListViewController: BasicViewController {
             },
             failed: { error in
                 self.hideLoading()
+                let message = error.getString("message")
+                self.showAlert(title: "Faild", message: message)
             })
     }
     

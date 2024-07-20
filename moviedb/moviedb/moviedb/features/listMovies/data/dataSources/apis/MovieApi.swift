@@ -17,7 +17,7 @@ class MovieApi: MovieApiContract {
     func getNowPlaying(page:Int,success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
         let parameters = ["page": String(page)]
-        self.apiClient.call(parameters: parameters, webserviceType: WebserviceType.nowPlaying,
+        self.apiClient.call(method: HTTPMethod.get, parameters: parameters, webserviceType: WebserviceType.nowPlaying,
                             success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
             success(reponseItem)
@@ -32,7 +32,9 @@ class MovieApi: MovieApiContract {
     
     func getPopular(page:Int, success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         let parameters = ["page": String(page)]
-        self.apiClient.call(parameters: parameters,webserviceType: WebserviceType.popular,
+        self.apiClient.call(method: HTTPMethod.get,
+                            parameters: parameters,
+                            webserviceType: WebserviceType.popular,
                             success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
             success(reponseItem)
@@ -47,7 +49,7 @@ class MovieApi: MovieApiContract {
     
     func getUpcoming(page:Int, success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         let parameters = ["page": String(page)]
-        self.apiClient.call(parameters: parameters,webserviceType: WebserviceType.upcoming,
+        self.apiClient.call(method: HTTPMethod.get,parameters: parameters,webserviceType: WebserviceType.upcoming,
                             success: { response in
             let reponseItem = ListMovieApiResponseDataMapper.fromApiMap(response: response)
             success(reponseItem)

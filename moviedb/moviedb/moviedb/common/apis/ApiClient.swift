@@ -9,11 +9,13 @@ import Foundation
 
 enum NetworkError: Error {
     case invalidURL
+    case serializationError
+    case noData
     case requestFailed(Error)
-    case timeOut
-    case networkError(Error)
-    case unknownError
+    case invalidResponse
+    case customError(String)
 }
+
 
 enum HTTPMethod: String {
     case get = "GET"
@@ -22,68 +24,98 @@ enum HTTPMethod: String {
 
 class ApiClient : ApiClientContract {
     
-    //    static let shared = ApiClient()
     
     init() {}
     
     
-    func call(parameters: [String: Any]? = nil,
-              webserviceType: String,
-              success: @escaping (([String: Any]) -> Void),
-              failed: @escaping (([String: Any]) -> Void)) {
+    func call( method: HTTPMethod,
+               parameters: [String: Any]? = nil,
+               webserviceType: String,
+               success: @escaping (([String: Any]) -> Void),
+               failed: @escaping (([String: Any]) -> Void)) {
         let url = ServerConfigurationsManager.sharedInstance.webservicesUrl + webserviceType
         
         var finalParameters: [String: Any] = getDefaultParameters()
-
-          if let params = parameters {
-              finalParameters.merge(dict: params)
-          }
-    
-        request(urlString: url,
-                method: HTTPMethod.get,
-                parameters: finalParameters,
-                completion: { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
-            guard let data = data else {
-                print("No data received")
-                return
-            }
-            // Process the data
-            if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-                print(json)
-                success(json as? [String : Any] ?? [:])
-            }
-        })
         
+        if let params = parameters {
+            finalParameters.merge(dict: params)
+        }
+        
+        request(urlString:url,
+                method: method,
+                parameters: finalParameters) { result in
+            switch result {
+            case .success(let data):
+                // Handle the successful response data
+                print("Data received: \(data)")
+                
+                // Example of parsing JSON response
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        print("JSON: \(json)")
+                        let response = json as [String : Any]
+                        success(response)
+                        
+                    }
+                } catch {
+                    print("Failed to parse JSON: \(error)")
+                }
+                
+            case .failure(let error):
+                // Handle the error
+                var message = "Something error please try again"
+                switch error {
+                case .invalidURL:
+                    message = "Invalid URL"
+                case .serializationError:
+                    message = "Failed to serialize request parameters"
+                case .noData:
+                    message = "No data received from server"
+                case .requestFailed(let error):
+                    message = "Request failed: \(error.localizedDescription)"
+                    
+                case .invalidResponse:
+                    message = "Invalid response from server"
+                case .customError(let errorMessage):
+                    message = errorMessage
+                }
+                
+                failed(["message":message])
+            }
+        }
     }
+    
     
     
     func request(urlString: String,
                  method: HTTPMethod,
                  parameters: [String: Any]? = nil,
-                 completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+                 completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        // Validate URL
         guard let url = URL(string: urlString) else {
-            
-            print("Invalid URL")
+            completion(.failure(.invalidURL))
             return
         }
         
+        // Create URLRequest
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         
-        if(method == .post){
+        // Set request body and headers for POST method
+        if method == .post {
             if let parameters = parameters {
-                request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
-                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                do {
+                    request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                } catch {
+                    completion(.failure(.serializationError))
+                    return
+                }
             }
-        }
-        else if(method == .get){
+        } else if method == .get {
             if let query = convertParametersToQuery(parameters: parameters) {
                 var urlComponents = URLComponents(string: urlString)
-                       urlComponents?.query = query
+                urlComponents?.query = query
                 
                 if let url = urlComponents?.url {
                     request = URLRequest(url: url)
@@ -91,10 +123,39 @@ class ApiClient : ApiClientContract {
             }
         }
         
-        let task = URLSession.shared.dataTask(with: request, completionHandler: completion)
+        // Perform the network request
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(.requestFailed(error)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            // Check response status code and handle response
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        print("JSON: \(json)")
+                        let response = json as [String: Any]
+                        let message = response.getString("status_message")
+                        completion(.failure(.customError(message)))
+                    }
+                } catch {
+                    completion(.failure(.serializationError))
+                }
+                
+                return
+            }
+            
+            completion(.success(data))
+        }
         task.resume()
     }
-    
     
     
     func convertParametersToQuery(parameters: [String: Any]?) -> String? {
@@ -104,19 +165,10 @@ class ApiClient : ApiClientContract {
         return components.query?.removingPercentEncoding
     }
     
-    
     func getDefaultParameters() -> [String: Any]{
         let queryItems = ["api_key": ServerConfigurationsManager.sharedInstance.apiKey ]
         return queryItems
     }
-    
 }
 
 
-extension ApiClient {
-    
-    func handleError() -> String {
-        return ""
-    }
-    
-}

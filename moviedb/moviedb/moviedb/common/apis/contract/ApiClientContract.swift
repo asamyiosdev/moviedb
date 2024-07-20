@@ -8,7 +8,10 @@
 import Foundation
 
 protocol ApiClientContract {
-    func call(parameters: [String: Any]?, webserviceType: String, success: @escaping ([String: Any]) -> Void, failed: @escaping ([String: Any]) -> Void)
+    func call(method: HTTPMethod,
+              parameters: [String: Any]?,
+              webserviceType: String,
+              success: @escaping ([String: Any]) -> Void, failed: @escaping ([String: Any]) -> Void)
     
 }
 

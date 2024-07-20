@@ -559,17 +559,9 @@
 		BE4745F62C49F66100D24AA4 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				BE4745F72C49F6F600D24AA4 /* Storyboards-Xibs */,
 				BE4745F82C49F6F600D24AA4 /* ViewModels+ViewControllers */,
 			);
 			path = presentation;
-			sourceTree = "<group>";
-		};
-		BE4745F72C49F6F600D24AA4 /* Storyboards-Xibs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Storyboards-Xibs";
 			sourceTree = "<group>";
 		};
 		BE4745F82C49F6F600D24AA4 /* ViewModels+ViewControllers */ = {
