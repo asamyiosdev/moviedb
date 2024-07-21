@@ -9,6 +9,8 @@ import Foundation
 
 protocol MovieServiceContract {
     
+    // MARK: - List type movies
+    
     func getNowPlaying(
         page:Int,
         success: @escaping ((ListMovieApiResponse) -> Void),
@@ -23,6 +25,15 @@ protocol MovieServiceContract {
         page:Int,
         success: @escaping ((ListMovieApiResponse) -> Void),
         failed: @escaping (([String: Any]) -> Void));
+    
+    
+    // MARK: - MovieDetails
+    
+    func getMovieDetails(
+        id:Int,
+        success: @escaping ((MovieDetails) -> Void),
+        failed: @escaping (([String: Any]) -> Void));
+    
 }
 
 

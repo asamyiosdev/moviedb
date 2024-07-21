@@ -79,6 +79,19 @@ extension Dictionary {
         }
     }
     
+    func getDouble(_ key1: Key, defaultValue: Double = Double()) -> Double {
+        guard keys.contains(key1) == true else {
+            return defaultValue
+        }
+        
+        let descriptionCheck = self[key1] as? Double ?? Double(self[key1] as? String ?? "")
+        if descriptionCheck != nil {
+            return descriptionCheck ?? 0
+        } else {
+            return defaultValue
+        }
+    }
+    
     func toJSONString() -> String {
         var jsonString = ""
         

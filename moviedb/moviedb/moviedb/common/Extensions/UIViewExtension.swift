@@ -3,21 +3,6 @@ import UIKit
 
 @IBDesignable
 extension UIView {
-//    func showLoadingView(onView: UIView? = nil, completionBlock: LoadingCompletionBlock? = nil) {
-//        LottieLoadingView.manager.showLoadingView(onView: onView, completionBlock: completionBlock)
-//    }
-//
-//    func hideLoadingView(
-//        relatedObject: Any? = nil,
-//        status: LoadingStatus = .success,
-//        image: UIImage? = nil,
-//        title: String = "",
-//        subtitle: String = "",
-//        completionBlock: LoadingCompletionBlock? = nil
-//    ) {
-//        LottieLoadingView.manager.hideLoadingView(withDelay: nil, image: image, title: title, subtitle: subtitle, completionBlock: completionBlock, status: status, relatedObject: relatedObject)
-//    }
-
     func roundTop() {
         let radius = (bounds.height / 2) + pow(bounds.width, 2) / (8 * bounds.height)
         let offsetAngle = asin(bounds.width / (2 * radius))

@@ -23,32 +23,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F1A9B233-8D5F-4766-A673-82E804022F21"
-            shouldBeEnabled = "Yes"
+            uuid = "C0EB1F22-F8BB-4967-97E7-4FAD1D8E848B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/BasicViewController.swift"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/movieDetails/MovieDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "navigateToMovieDetails(item:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getMovieDetails(id:success:failed:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6E188C8B-EAB1-4037-9B43-AD781BE4954E"
+            uuid = "38397982-1E78-4973-A1CB-1028CDCEFF8F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/BasicViewController.swift"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/movieDetails/MovieDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "navigateToMovieDetails(item:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E07A7989-5AE7-4678-B9E8-C4C918C413F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/CustomNavigationBar/CustomNavigationBar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "backButtonClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

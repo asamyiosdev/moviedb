@@ -8,11 +8,16 @@
 import Foundation
 
 class MovieService: MovieServiceContract {
+    
+    
     private let movieApi: MovieApiContract
     
     init(movieApi: MovieApiContract) {
         self.movieApi = movieApi
     }
+    
+    
+    // MARK: - List type movies
     
     
     func getNowPlaying(page:Int,success: @escaping ((ListMovieApiResponse) -> Void), failed: @escaping (([String : Any]) -> Void)) {
@@ -51,6 +56,23 @@ class MovieService: MovieServiceContract {
             
         })
     }
+    
+    // MARK: - MovieDetails
+    
+    func getMovieDetails(
+        id:Int,
+        success: @escaping ((MovieDetails) -> Void),
+        failed: @escaping (([String: Any]) -> Void)){
+            self.movieApi.getMovieDetails(id: id,success: { response in
+                let reponseItem = MovieDetailsDataMapper.toEntity(dataMode: response)
+                success(reponseItem)
+                
+            },
+                                          failed: { error in
+                failed(error)
+                
+            })
+        }
     
 }
 

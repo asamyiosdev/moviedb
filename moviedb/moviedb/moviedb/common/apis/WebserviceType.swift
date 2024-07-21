@@ -17,5 +17,6 @@ struct WebserviceType {
     static let popular = "\(WebServiceSource.movie)/popular"
 
     static let upcoming = "\(WebServiceSource.movie)/upcoming"
-    
+ 
+    static let movieDetails = "\(WebServiceSource.movie)/"
 }

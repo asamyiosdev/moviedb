@@ -87,7 +87,7 @@ class CustomNavigationBar: UIView {
 
     
     // MARK: - Private Methods
-    private func configTitleView(title: String? = "") {
+    func configTitleView(title: String? = "") {
         titleNavigationLabel?.text = title
     }
 }

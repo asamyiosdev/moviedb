@@ -14,6 +14,8 @@ class MovieApi: MovieApiContract {
         self.apiClient = apiClient
     }
     
+    // MARK: - List type movies
+    
     func getNowPlaying(page:Int,success: @escaping ((ListMovieApiResponseDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
         
         let parameters = ["page": String(page)]
@@ -60,6 +62,31 @@ class MovieApi: MovieApiContract {
             
         })
     }
+    
+    // MARK: - MovieDetails
+    
+    
+    
+    func getMovieDetails(
+        id:Int,
+        success: @escaping ((MovieDetailsDataModel) -> Void),
+        failed: @escaping (([String: Any]) -> Void)){
+            
+            let webserviceType = WebserviceType.movieDetails +  String(id)
+            self.apiClient.call(method: HTTPMethod.get,
+                                parameters: nil,
+                                webserviceType: webserviceType,
+                                success: { response in
+                let reponseItem = MovieDetailsDataMapper.fromApiMap(response: response)
+                success(reponseItem)
+                
+            },
+                                failed: { error in
+                failed(error)
+                
+            })
+        }
+    
 }
 
 

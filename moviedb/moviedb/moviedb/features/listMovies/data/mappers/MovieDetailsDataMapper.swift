@@ -22,7 +22,7 @@ class MovieDetailsDataMapper {
                                      originalLanguage: response.getString("original_language"),
                                      originalTitle: response.getString("original_title"),
                                      overview: response.getString("overview"),
-                                     popularity: 0,
+                                     popularity: response.getDouble("popularity"),
                                      posterPath: response.getString("poster_path"),
                                      productionCompanies: ProductionCompanyDataMapper.fromListApiMap(list: response.getArray("production_companies")),
                                      productionCountries: ProductionCountryDataMapper.fromListApiMap(list: response.getArray("production_countries")),
@@ -33,7 +33,7 @@ class MovieDetailsDataMapper {
                                      tagline:  response.getString("tagline"),
                                      title: response.getString("title"),
                                      video:  response.getBool("video"),
-                                     voteAverage: 0,
+                                     voteAverage: (response.getDouble("vote_average")),
                                      voteCount: response.getInt("voteCount"))
         
         

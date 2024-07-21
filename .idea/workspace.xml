@@ -2,20 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ebc93e-e07b-428f-8042-17545c68a978" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/BelongsToCollectionDataMapper.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/GenreDataMapper.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/MovieDetailsDataMapper.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/ProductionCompanyDataMapper.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/ProductionCountryDataMapper.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/models/MovieDetailsDataModel.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/domain/entities/MovieDetails.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Extensions/UIApplicationExtension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/dependencies/usecasesProviders/GetMovieDetailsUsecaseProvider.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/dependencies/viewModelProvider/MovieDetailsViewModelProvider.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/domain/contracts/usecasesContracts/GetMovieDetailsUsecaseContract.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/domain/usecases/GetMovieDetailsUsecase.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/movieDetails/Items/ProductionCompaniesCell.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/xcuserdata/ahmedsamy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/project.xcworkspace/xcuserdata/ahmedsamy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/xcuserdata/ahmedsamy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb.xcodeproj/xcuserdata/ahmedsamy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviedb/moviedb/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/ListMovieApiResponseDataMapper.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/mappers/ListMovieApiResponseDataMapper.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/PopularListMovie/PopularListMovieViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/PopularListMovie/PopularListMovieViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Extensions/UIViewExtension.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/Extensions/UIViewExtension.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/apis/WebserviceType.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/common/apis/WebserviceType.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/contracts/apis_contracts/MovieApiContract.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/contracts/apis_contracts/MovieApiContract.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/dataSources/apis/MovieApi.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/dataSources/apis/MovieApi.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/services/MovieService.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/data/services/MovieService.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/domain/contracts/servicesContracts/MovieServiceContract.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/domain/contracts/servicesContracts/MovieServiceContract.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/MovieDetails/MovieDetailsViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/movieDetails/MovieDetailsViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/MovieDetails/MovieDetailsViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/movieDetails/MovieDetailsViewModel.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/CustomNavigationBar/CustomNavigationBar.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/common/Custom/CustomNavigationBar/CustomNavigationBar.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/BasicViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/moviedb/moviedb/moviedb/features/listMovies/presentation/ViewModels+ViewControllers/listMovie/BasicViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +63,8 @@
       <updated>1721331747158</updated>
       <workItem from="1721331750201" duration="597000" />
       <workItem from="1721332367446" duration="213000" />
-      <workItem from="1721494705692" duration="2254000" />
+      <workItem from="1721494705692" duration="4404000" />
+      <workItem from="1721592039994" duration="1162000" />
     </task>
     <servers />
   </component>
