@@ -33,10 +33,11 @@ class MovieDetailsViewController: BasicViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        customNavigationBar.config(backAction: ({
+        customNavigationBar?.config(backAction: {
             self.dismiss(animated: true)
-        }))
+        })
         
+      
         callDataSource()
         
         self.configProductionCompaniesCollectionView()

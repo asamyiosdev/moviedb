@@ -26,8 +26,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vY8-BA-Ape">
                             <rect key="frame" x="0.0" y="0.0" width="348" height="45"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-sP-teo">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-sP-teo">
                                     <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <color key="backgroundColor" red="0.2588235438" green="0.2941176593" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="9IG-RL-z21"/>
                                         <constraint firstAttribute="width" constant="45" id="ZPM-b9-Tdx"/>
