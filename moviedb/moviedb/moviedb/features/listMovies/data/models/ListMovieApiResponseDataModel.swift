@@ -8,7 +8,6 @@
 import Foundation
 
 struct ListMovieApiResponseDataModel : Equatable{
-
     let dates: Dates
     let page: Int
     let results: [MovieDataModel]

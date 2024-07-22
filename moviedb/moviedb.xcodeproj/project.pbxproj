@@ -150,7 +150,6 @@
 		BE9FA8B02C47DA3200CF780C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9FA8AE2C47DA3200CF780C /* Main.storyboard */; };
 		BE9FA8B22C47DA3500CF780C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9FA8B12C47DA3500CF780C /* Assets.xcassets */; };
 		BE9FA8B52C47DA3500CF780C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9FA8B32C47DA3500CF780C /* LaunchScreen.storyboard */; };
-		BE9FA8C02C47DA3500CF780C /* moviedbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8BF2C47DA3500CF780C /* moviedbTests.swift */; };
 		BE9FA8CA2C47DA3500CF780C /* moviedbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8C92C47DA3500CF780C /* moviedbUITests.swift */; };
 		BE9FA8CC2C47DA3500CF780C /* moviedbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8CB2C47DA3500CF780C /* moviedbUITestsLaunchTests.swift */; };
 		BE9FA8EA2C48522500CF780C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9FA8E92C48522500CF780C /* ApiClient.swift */; };
@@ -279,7 +278,6 @@
 		BE9FA8B42C47DA3500CF780C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE9FA8B62C47DA3500CF780C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9FA8BB2C47DA3500CF780C /* moviedbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviedbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE9FA8BF2C47DA3500CF780C /* moviedbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviedbTests.swift; sourceTree = "<group>"; };
 		BE9FA8C52C47DA3500CF780C /* moviedbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moviedbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9FA8C92C47DA3500CF780C /* moviedbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviedbUITests.swift; sourceTree = "<group>"; };
 		BE9FA8CB2C47DA3500CF780C /* moviedbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviedbUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -744,7 +742,6 @@
 			children = (
 				BE4745502C49AC9100D24AA4 /* common */,
 				BE47454E2C49AC1B00D24AA4 /* features */,
-				BE9FA8BF2C47DA3500CF780C /* moviedbTests.swift */,
 			);
 			path = moviedbTests;
 			sourceTree = "<group>";
@@ -1087,7 +1084,6 @@
 				BE4745F02C49ED1C00D24AA4 /* GetNowPlayingUsecaseProviderTests.swift in Sources */,
 				BE9FA9202C488CB100CF780C /* ListMovieApiResponseDataMapper.swift in Sources */,
 				BE4745A52C49D80200D24AA4 /* MovieApiProviderTests.swift in Sources */,
-				BE9FA8C02C47DA3500CF780C /* moviedbTests.swift in Sources */,
 				BE47457A2C49B8FC00D24AA4 /* MovieApiTests.swift in Sources */,
 				BE9FA8EB2C48522500CF780C /* ApiClient.swift in Sources */,
 				BE413A742C4BCE3A00029341 /* NowPlayingListViewModel.swift in Sources */,
