@@ -149,18 +149,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRd-p0-wAS">
                                 <rect key="frame" x="0.0" y="59" width="393" height="824"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-lj-rqZ" customClass="CustomNavigationBar" customModule="moviedb" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="jCT-k5-rCi"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hidenBackButton" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="TitleText" value="Details"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="xmark" catalog="system"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qPz-nx-e9h">
                                         <rect key="frame" x="0.0" y="46" width="393" height="778"/>
                                         <userDefinedRuntimeAttributes>
@@ -441,7 +429,7 @@
                                                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dvy-UX-WfL">
                                                                                                                     <rect key="frame" x="0.0" y="0.0" width="86" height="80.666666666666671"/>
                                                                                                                     <subviews>
-                                                                                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="withdraw_home" translatesAutoresizingMaskIntoConstraints="NO" id="cN9-a1-zKc">
+                                                                                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cN9-a1-zKc">
                                                                                                                             <rect key="frame" x="18" y="4" width="50" height="50"/>
                                                                                                                             <constraints>
                                                                                                                                 <constraint firstAttribute="height" constant="50" id="Sj0-aK-uzy"/>
@@ -533,6 +521,18 @@
                                             <constraint firstItem="K8o-2t-77A" firstAttribute="leading" secondItem="xRX-9u-40T" secondAttribute="leading" id="ihY-aJ-WWe"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYu-lj-rqZ" customClass="CustomNavigationBar" customModule="moviedb" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="jCT-k5-rCi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hidenBackButton" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="TitleText" value="Details"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="xmark" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -555,7 +555,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zSD-OM-ndd"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PRd-p0-wAS" firstAttribute="bottom" secondItem="zSD-OM-ndd" secondAttribute="bottom" constant="65" id="0PQ-7N-tdk"/>
                             <constraint firstItem="PRd-p0-wAS" firstAttribute="leading" secondItem="zSD-OM-ndd" secondAttribute="leading" id="HiW-wj-lT9"/>
@@ -577,14 +577,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF7-gl-HvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1666.4122137404579" y="908.45070422535218"/>
+            <point key="canvasLocation" x="-1674" y="746"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="movieclapper" catalog="system" width="128" height="113"/>
         <image name="popcorn" catalog="system" width="103" height="128"/>
-        <image name="withdraw_home" width="45" height="45"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="Transfer_Details_Background_Color">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
@@ -603,9 +602,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
