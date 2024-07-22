@@ -97,9 +97,14 @@ class GetNowPlayingUsecaseTests: XCTestCase {
 
 
 class MockMovieService: MovieServiceContract {
+
+    
     var nowPlayingResponse: ListMovieApiResponse?
     var popularResponse: ListMovieApiResponse?
     var upcomingResponse: ListMovieApiResponse?
+    
+    var movieDetails: MovieDetails?
+    
     
     var nowPlayingError: [String: Any]?
     var popularError: [String: Any]?
@@ -127,5 +132,9 @@ class MockMovieService: MovieServiceContract {
         } else if let error = upcomingError {
             failed(error)
         }
+    }
+    
+    func getMovieDetails(id: Int, success: @escaping ((MovieDetails) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+        
     }
 }

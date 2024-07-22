@@ -211,10 +211,14 @@ class MovieServiceTests: XCTestCase {
 
 
 class MockMovieApi: MovieApiContract {
+
     
     var nowPlayingResponse: ListMovieApiResponseDataModel?
     var popularResponse: ListMovieApiResponseDataModel?
     var upcomingResponse: ListMovieApiResponseDataModel?
+    
+    var movieDetailsResponse: MovieDetailsDataModel?
+    
     
     var nowPlayingError: [String: Any]?
     var popularError: [String: Any]?
@@ -243,6 +247,11 @@ class MockMovieApi: MovieApiContract {
         } else if let error = upcomingError {
             failed(error)
         }
+    }
+    
+    
+    func getMovieDetails(id: Int, success: @escaping ((MovieDetailsDataModel) -> Void), failed: @escaping (([String : Any]) -> Void)) {
+        
     }
     
 }

@@ -66,6 +66,4 @@ class MovieDetailsDataMapper {
                              voteAverage: dataMode.voteAverage,
                              voteCount: dataMode.voteCount)
     }
-    
-    
 }
